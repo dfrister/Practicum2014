@@ -18,8 +18,7 @@ void setup() {
   /*the variables state0 and state1 are used in case of a high-active or
   low-active switch (transistor type). State0 and state1 can be changed
   from HIGH to LOW or vice versa to change all the LED signals at once*/
-  state0 = LOW; 
-  state1 = HIGH;  
+  
 
 }
 
@@ -31,6 +30,8 @@ void loop() {
   digitalWrite(4, HIGH); //set trigger high
   delayMicroseconds(5); //delay
   digitalWrite(4, LOW); // set trigger low
+   int state0 = LOW; 
+  int state1 = HIGH; 
   
   duration = pulseIn(12, HIGH); //wait for echo to go high, returns time
   distance = duration / 74 / 2; //convert time to distance
@@ -39,19 +40,23 @@ void loop() {
   digitalWrite(8, state0); //turn off  mid LED
   digitalWrite(7, state0); //turn off far LED
   
-  if (distance < 180) //if detection within 5 feet --- 180 inches = 15ft
+  if (distance < 60) //if detection within 5 feet --- 60 inches = 5ft
    {  
+     digitalWrite(13, state1); //turn on close LED
+     digitalWrite(8, state1); //turn on mid LED
      digitalWrite(7, state1); //turn on far LED
    }
-  if (distance < 120) //if detection within 10 feet --- 120 inches = 10ft
+  else if (distance < 120) //if detection within 10 feet --- 120 inches = 10ft
    {
      digitalWrite(8, state1); //turn on mid LED
+     digitalWrite(7, state1); //turn on far LED
+
    }
-   if (distance < 60) //if detection within 5 feet --- 60 inches = 5 ft
+   else if (distance < 180) //if detection within 15 feet --- 180 inches = 15 ft
    {
-     digitalWrite(13, state1); //turn on close LED
+     digitalWrite(7, state1); //turn on far LED
    }
-   else if //If nothing detected 
+   else //If nothing detected 
    {
      digitalWrite(13, state0); //turn off close LED
      digitalWrite(8, state0); //turn off  mid LED
