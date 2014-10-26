@@ -8,7 +8,7 @@
 #define triggerPin_1 11
 #define echoPin_1 10
 
-#define sensorCount 0 // Number of sensors, zero indexed (subtract 1 from total count)
+#define sensorCount 1 // Number of sensors, zero indexed (subtract 1 from total count)
 
 int triggerPins[] = {triggerPin_0, triggerPin_1};
 int echoPins[] = { echoPin_0, echoPin_1};
@@ -138,26 +138,51 @@ void loop() {
   
     duration = pulseIn(echoPins[c], HIGH); //wait for echo to go high, returns time
     distance = duration / 74 / 2; //convert time to distance
- 
+   
+   LED15();
     if (distance < 60) //if detection within 5 feet --- 60 inches = 5ft
     {  
-      LED0();
-      LED1();
-      LED2();
+      if (c == 0)
+      {
+        LED0();
+        LED1();
+        LED2();
+      }
+      else if (c == 1)
+      {
+        LED3();
+        LED4();
+        LED5();
       }
     else if (distance < 120) //if detection within 10 feet --- 120 inches = 10ft
     {
-      LED0();
-      LED1();
-
+      if (c == 0)
+      {
+        LED0();
+        LED1();
       }
+      else if (c == 1)
+      {
+        LED3();
+        LED4();
+      }
+    }
     else if (distance < 240) //if detection within 15 feet --- 180 inches = 15 ft
     {
-      LED0();
+      if (c == 0)
+      {
+        LED0();        
       }
+      else if (c == 1)
+      {
+        LED3();
+      }
+      
+    }
     else //If nothing detected 
     {
       LED15();
       }
-   }
+    }
+  }
 }
