@@ -2,16 +2,8 @@
 #define ledBIT1 5
 #define ledBIT2 6
 #define ledBIT3 7
-
-#define triggerPin_0 13
-#define echoPin_0 12
-#define triggerPin_1 11
-#define echoPin_1 10
-
-#define sensorCount 1 // Number of sensors, zero indexed (subtract 1 from total count)
-
-int triggerPins[] = {triggerPin_0, triggerPin_1};
-int echoPins[] = { echoPin_0, echoPin_1};
+#define triggerPin 11
+#define echoPin 12
 
 void LED0() {
    digitalWrite(ledBIT0, LOW);
@@ -117,72 +109,49 @@ void setup() {
   pinMode(ledBIT1, OUTPUT); //for the mux
   pinMode(ledBIT2, OUTPUT); //for the mux
   pinMode(ledBIT3, OUTPUT); //for the mux
-  pinMode(triggerPin_0, OUTPUT); //Sensor Trigger
-  pinMode(echoPin_0, INPUT); // Echo Input
-  pinMode(triggerPin_1, OUTPUT); //Sensor Trigger
-  pinMode(echoPin_1, INPUT); // Echo Input
+  pinMode(triggerPin, OUTPUT); //Sensor Trigger
+  pinMode(echoPin, INPUT); // Echo Input
+  
+  /*the variables state0 and state1 are used in case of a high-active or
+  low-active switch (transistor type). State0 and state1 can be changed
+  from HIGH to LOW or vice versa to change all the LED signals at once*/
+  
+
 }
 
 // the loop function runs over and over again forever
 void loop() {
-  for (int c=0; c<= sensorCount; c++)
-  {
-    long duration, distance; //variables for pulsing
-    digitalWrite(triggerPins[c], LOW); // set trigger low
-    delayMicroseconds(2); // delay
-    digitalWrite(triggerPins[c], HIGH); //set trigger high
-    delayMicroseconds(5); //delay
-    digitalWrite(triggerPins[c], LOW); // set trigger low
-    int state0 = LOW; 
-    int state1 = HIGH; 
+  long duration, distance; //variables for pulsing
+  digitalWrite(triggerPin, LOW); // set trigger low
+  delayMicroseconds(2); // delay
+  digitalWrite(triggerPin, HIGH); //set trigger high
+  delayMicroseconds(5); //delay
+  digitalWrite(triggerPin, LOW); // set trigger low
+  int state0 = LOW; 
+  int state1 = HIGH; 
   
-    duration = pulseIn(echoPins[c], HIGH); //wait for echo to go high, returns time
-    distance = duration / 74 / 2; //convert time to distance
-   
-   LED15();
-    if (distance < 60) //if detection within 5 feet --- 60 inches = 5ft
-    {  
-      if (c == 0)
-      {
-        LED0();
-        LED1();
-        LED2();
-      }
-      else if (c == 1)
-      {
-        LED3();
-        LED4();
-        LED5();
-      }
-    else if (distance < 120) //if detection within 10 feet --- 120 inches = 10ft
-    {
-      if (c == 0)
-      {
-        LED0();
-        LED1();
-      }
-      else if (c == 1)
-      {
-        LED3();
-        LED4();
-      }
-    }
-    else if (distance < 240) //if detection within 15 feet --- 180 inches = 15 ft
-    {
-      if (c == 0)
-      {
-        LED0();        
-      }
-      else if (c == 1)
-      {
-        LED3();
-      }
-      
-    }
-    else //If nothing detected 
-    {
-      LED15();
-      }
-    }
-  }
+  duration = pulseIn(echoPin, HIGH); //wait for echo to go high, returns time
+  distance = duration / 74 / 2; //convert time to distance
+  
+  
+  if (distance < 60) //if detection within 5 feet --- 60 inches = 5ft
+   {  
+  LED1();
+  LED2();
+  LED3();
+   }
+  else if (distance < 120) //if detection within 10 feet --- 120 inches = 10ft
+   {
+     LED1();
+     LED2();
+
+   }
+   else if (distance < 240) //if detection within 15 feet --- 180 inches = 15 ft
+   {
+     LED1();
+   }
+   else //If nothing detected 
+   {
+     LED0();
+   }
 }

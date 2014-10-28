@@ -6871,14 +6871,13 @@ Source: http://www.molex.com/pdm_docs/sd/026604100_sd.pdf</description>
 <parts>
 <part name="FRAME1" library="frames" deviceset="FRAME_B_L" device=""/>
 <part name="IC1" library="linear" deviceset="78*" device="DT" technology="05"/>
-<part name="C1" library="rcl" deviceset="C-EU" device="025-024X044" value="1u"/>
-<part name="C2" library="rcl" deviceset="C-EU" device="025-024X044" value="1u"/>
+<part name="C1" library="rcl" deviceset="C-EU" device="025-024X044" value="33u"/>
+<part name="C2" library="rcl" deviceset="C-EU" device="025-024X044" value=".1u"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="MOTORCYCLEBATTERY" library="supply2" deviceset="+12V" device=""/>
 <part name="U1" library="SparkFun-DigitalIC" deviceset="ATMEGA328P_PDIP" device=""/>
 <part name="J1" library="SparkFun-Connectors" deviceset="AVR_SPI_PRG_6" device="PTH"/>
-<part name="R1" library="rcl" deviceset="R-US_" device="0414/5V"/>
-<part name="C3" library="rcl" deviceset="C-EU" device="025-024X044" value="1u"/>
+<part name="R1" library="rcl" deviceset="R-US_" device="0414/5V" value="4.7k"/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="SV1" library="con-lsta" deviceset="FE06-1" device=""/>
 <part name="X1" library="con-molex" deviceset="KK-156-4" device=""/>
@@ -6925,7 +6924,6 @@ Source: http://www.molex.com/pdm_docs/sd/026604100_sd.pdf</description>
 <instance part="U1" gate="G$1" x="99.06" y="205.74"/>
 <instance part="J1" gate="G$1" x="35.56" y="175.26"/>
 <instance part="R1" gate="G$1" x="66.04" y="246.38" rot="R90"/>
-<instance part="C3" gate="G$1" x="55.88" y="231.14" rot="R270"/>
 <instance part="GND2" gate="1" x="50.8" y="160.02"/>
 <instance part="SV1" gate="G$1" x="180.34" y="190.5" rot="R180"/>
 <instance part="X1" gate="-1" x="218.44" y="203.2"/>
@@ -7032,13 +7030,6 @@ Source: http://www.molex.com/pdm_docs/sd/026604100_sd.pdf</description>
 <junction x="21.59" y="256.54"/>
 </segment>
 </net>
-<net name="DTR" class="0">
-<segment>
-<pinref part="C3" gate="G$1" pin="2"/>
-<wire x1="50.8" y1="231.14" x2="45.72" y2="231.14" width="0.1524" layer="91"/>
-<label x="45.72" y="231.14" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="RESET" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="5"/>
@@ -7050,17 +7041,7 @@ Source: http://www.molex.com/pdm_docs/sd/026604100_sd.pdf</description>
 <pinref part="U1" gate="G$1" pin="PC6(/RESET)"/>
 <wire x1="76.2" y1="231.14" x2="66.04" y2="231.14" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="231.14" x2="66.04" y2="241.3" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="231.14" x2="58.42" y2="231.14" width="0.1524" layer="91"/>
-<junction x="66.04" y="231.14"/>
-<pinref part="C3" gate="G$1" pin="1"/>
 <label x="68.58" y="231.14" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="MOSI" class="0">
-<segment>
-<pinref part="J1" gate="G$1" pin="4"/>
-<wire x1="45.72" y1="175.26" x2="55.88" y2="175.26" width="0.1524" layer="91"/>
-<label x="49.53" y="175.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="BIT0" class="0">
@@ -7171,7 +7152,7 @@ Source: http://www.molex.com/pdm_docs/sd/026604100_sd.pdf</description>
 <label x="205.74" y="185.42" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="ECHO2" class="0">
+<net name="MOSI/ECHO2" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="PB3(MOSI/OC2)"/>
 <label x="124.46" y="177.8" size="1.778" layer="95"/>
@@ -7183,10 +7164,22 @@ Source: http://www.molex.com/pdm_docs/sd/026604100_sd.pdf</description>
 <wire x1="198.12" y1="182.88" x2="215.9" y2="182.88" width="0.1524" layer="91"/>
 <label x="208.28" y="182.88" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="4"/>
+<wire x1="45.72" y1="175.26" x2="55.88" y2="175.26" width="0.1524" layer="91"/>
+<label x="49.53" y="175.26" size="1.778" layer="95"/>
+</segment>
 </net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="113,1,215.796,139.596,FRAME1,,,,,"/>
+<approved hash="113,1,175.302,187.765,SV1,,,,,"/>
+<approved hash="113,1,218.878,203.2,X1,,,,,"/>
+<approved hash="113,1,218.878,185.42,X2,,,,,"/>
+<approved hash="113,1,218.878,167.64,X3,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
