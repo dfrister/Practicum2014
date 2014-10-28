@@ -51,6 +51,7 @@ void setup() {
 
 /*Variables for checking if the state changed*/
 bool change = false;
+int a, b, c, d;
 int newbin[] = {0,0,0};
 int oldbin[] = {0,0,0};
 
@@ -78,44 +79,86 @@ void loop() {
     switch (c) {
       case 0: //sensor 1 left sensor
       if (change == true) {
-        mux(1,1,0,0);
+        if (distance < 20) {
+          a=0;
+          b=1;
+          c=1;
+          d=0;
+          mux(a,b,c,d);
+        }
+        if (distance < 10) {
+          a=0;
+          b=1;
+          c=1;
+          d=0;
+          mux(a,b,c,d);
+        }
+        if (distance < 5) {
+          a=0;
+          b=1;
+          c=1;
+          d=0;
+          mux(a,b,c,d);
+        }
       }
-      if (distance < 20) {
-        mux(0,0,0,0);
-      }
-      if (distance < 10) {
-        mux(1,0,0,0);
-      }
-      if (distance < 5) {
-        mux(0,1,0,0);
+      else if (change == false) {
+         mux(a,b,c,d); //send last code
       }
       break;
       case 1: //sensor 2 right sensor
       if (change == true) {
-        mux(0,0,1,0);
+        if (distance < 20) {
+          a=0;
+          b=1;
+          c=1;
+          d=0;
+          mux(a,b,c,d);
+        }
+        if (distance < 10) {
+          a=0;
+          b=1;
+          c=1;
+          d=0;
+          mux(a,b,c,d);
+        }
+        if (distance < 5) {
+          a=0;
+          b=1;
+          c=1;
+          d=0;
+          mux(a,b,c,d);
+        }
       }
-      if (distance < 20) { //detection under 20 feet
-        mux(1,1,1,0);
+      else if (change == false) {
+         mux(a,b,c,d); //last code
       }
-      if (distance < 10) { //detection under 10 feet
-        mux(0,1,1,0);
-      }
-      if (distance < 5) { //detection under 5 feet
-        mux(1,0,1,0);
-      }
-      break;
+      break;      
       case 2: //sensor 3 rear sensor
       if (change == true) {
-        mux(0,0,0,1);
+        if (distance < 20) {
+          a=0;
+          b=1;
+          c=1;
+          d=0;
+          mux(a,b,c,d);
+        }
+        if (distance < 10) {
+          a=0;
+          b=1;
+          c=1;
+          d=0;
+          mux(a,b,c,d);
+        }
+        if (distance < 5) {
+          a=0;
+          b=1;
+          c=1;
+          d=0;
+          mux(a,b,c,d);
+        }
       }
-      if (distance < 20) { //detection under 20 feet
-        mux(1,1,0,1);
-      }
-      if (distance < 10) { //detection under 10 feet
-        mux(0,1,0,1);
-      }
-      if (distance < 5) { //detection under 5 feet
-        mux(1,0,0,1);
+      else if (change == false) {
+         mux(a,b,c,d); //last code
       }
       break;
     } // end of switch
