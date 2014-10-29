@@ -5253,33 +5253,33 @@ W = angled&lt;p&gt;
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="IC1" library="74xx-us" deviceset="74*154" device="DW"/>
-<part name="R1" library="resistor" deviceset="R-US_" device="M3516" value="4.7k"/>
-<part name="R2" library="resistor" deviceset="R-US_" device="M3516" value="150"/>
-<part name="R3" library="resistor" deviceset="R-US_" device="M3516" value="4.7k"/>
-<part name="R4" library="resistor" deviceset="R-US_" device="M3516" value="150"/>
-<part name="R5" library="resistor" deviceset="R-US_" device="M3516" value="4.7k"/>
-<part name="R6" library="resistor" deviceset="R-US_" device="M3516" value="150"/>
-<part name="R7" library="resistor" deviceset="R-US_" device="M3516" value="4.7k"/>
-<part name="R8" library="resistor" deviceset="R-US_" device="M3516" value="150"/>
-<part name="R9" library="resistor" deviceset="R-US_" device="M3516" value="4.7k"/>
-<part name="R10" library="resistor" deviceset="R-US_" device="M3516" value="150"/>
-<part name="R11" library="resistor" deviceset="R-US_" device="M3516" value="4.7k"/>
-<part name="R12" library="resistor" deviceset="R-US_" device="M3516" value="150"/>
-<part name="R13" library="resistor" deviceset="R-US_" device="M3516" value="4.7k"/>
-<part name="R14" library="resistor" deviceset="R-US_" device="M3516" value="150"/>
-<part name="R15" library="resistor" deviceset="R-US_" device="M3516" value="4.7k"/>
-<part name="R16" library="resistor" deviceset="R-US_" device="M3516" value="150"/>
-<part name="R17" library="resistor" deviceset="R-US_" device="M3516" value="4.7k"/>
-<part name="R18" library="resistor" deviceset="R-US_" device="M3516" value="150"/>
-<part name="LED1" library="led" deviceset="LED" device="SMT1206" value="LTL1CHKGKNN"/>
-<part name="LED2" library="led" deviceset="LED" device="SMT1206" value="LTL1CHKSKNN"/>
-<part name="LED3" library="led" deviceset="LED" device="SMT1206" value="LTL1CHKEKNN"/>
-<part name="LED4" library="led" deviceset="LED" device="SMT1206" value="LTL1CHKGKNN"/>
-<part name="LED5" library="led" deviceset="LED" device="SMT1206" value="LTL1CHKSKNN"/>
-<part name="LED6" library="led" deviceset="LED" device="SMT1206" value="LTL1CHKEKNN"/>
-<part name="LED7" library="led" deviceset="LED" device="SMT1206" value="LTL1CHKGKNN"/>
-<part name="LED8" library="led" deviceset="LED" device="SMT1206" value="LTL1CHKSKNN"/>
-<part name="LED9" library="led" deviceset="LED" device="SMT1206" value="LTL1CHKEKNN"/>
+<part name="R1" library="resistor" deviceset="R-US_" device="M3516"/>
+<part name="R2" library="resistor" deviceset="R-US_" device="M3516"/>
+<part name="R3" library="resistor" deviceset="R-US_" device="M3516"/>
+<part name="R4" library="resistor" deviceset="R-US_" device="M3516"/>
+<part name="R5" library="resistor" deviceset="R-US_" device="M3516"/>
+<part name="R6" library="resistor" deviceset="R-US_" device="M3516"/>
+<part name="R7" library="resistor" deviceset="R-US_" device="M3516"/>
+<part name="R8" library="resistor" deviceset="R-US_" device="M3516"/>
+<part name="R9" library="resistor" deviceset="R-US_" device="M3516"/>
+<part name="R10" library="resistor" deviceset="R-US_" device="M3516"/>
+<part name="R11" library="resistor" deviceset="R-US_" device="M3516"/>
+<part name="R12" library="resistor" deviceset="R-US_" device="M3516"/>
+<part name="R13" library="resistor" deviceset="R-US_" device="M3516"/>
+<part name="R14" library="resistor" deviceset="R-US_" device="M3516"/>
+<part name="R15" library="resistor" deviceset="R-US_" device="M3516"/>
+<part name="R16" library="resistor" deviceset="R-US_" device="M3516"/>
+<part name="R17" library="resistor" deviceset="R-US_" device="M3516"/>
+<part name="R18" library="resistor" deviceset="R-US_" device="M3516"/>
+<part name="LED1" library="led" deviceset="LED" device="SMT1206"/>
+<part name="LED2" library="led" deviceset="LED" device="SMT1206"/>
+<part name="LED3" library="led" deviceset="LED" device="SMT1206"/>
+<part name="LED4" library="led" deviceset="LED" device="SMT1206"/>
+<part name="LED5" library="led" deviceset="LED" device="SMT1206"/>
+<part name="LED6" library="led" deviceset="LED" device="SMT1206"/>
+<part name="LED7" library="led" deviceset="LED" device="SMT1206"/>
+<part name="LED8" library="led" deviceset="LED" device="SMT1206"/>
+<part name="LED9" library="led" deviceset="LED" device="SMT1206"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
