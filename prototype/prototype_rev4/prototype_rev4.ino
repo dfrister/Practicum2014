@@ -9,16 +9,16 @@ order to function as a proximity detector for the application of a
 blindspot detector for a motorcycle*/
 
 //Arduino pins to circuit
-#define muxBit0 4 //Connect pin 4 to mux A0
-#define muxBit1 5 //Connect pin 5 to mux A1
-#define muxBit2 6 //Connet pin 6 to mux A2
-#define muxBit3 7 //Connect pin 7 to mux A3
-#define triggerPin_0 13 //Connect pin 13 to sensor 1 trigger
-#define echoPin_0 12 //Connect pin 12 to sensor 1 echo
-#define triggerPin_1 11 //Connect pin 11 to sensor 2 trigger
-#define echoPin_1 10 //Connect pin 10 to sensor 2 echo
-#define triggerPin_2 9 //Placeholder
-#define echoPin_2 8 //Placeholder
+#define muxBit0 0 //Arduino Pin 0, Atmega pin 2 to mux A0
+#define muxBit1 1 //Arduino Pin 1, Atmega pin 3 to mux A1
+#define muxBit2 2 //Arduino Pin 2, Atmega pin 4 to mux A2
+#define muxBit3 3 //Arduino Pin 3, Atmega pin 5 to mux A3
+#define triggerPin_0 4 //Arduino Pin 4, Atmega pin 6 to sensor header 1
+#define echoPin_0 5 //Arduino Pin 5, Atmega pin 11 to sensor header 2
+#define triggerPin_1 6  //Arduino Pin 6, Atmega pin 12 to sensor header 3
+#define echoPin_1 7 //Arduino Pin 7, Atmega pin 13 to sensor header 4
+#define triggerPin_2 8 //Arduino Pin 8, Atmega pin 14 to sensor header 5
+#define echoPin_2 9 //Arduino Pin 9, Atmega pin 15 to sensor header 6
 
 #define sensorCount 1 //Number of sensors, zero indexed (subtract 1 from total count)
 
