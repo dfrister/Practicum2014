@@ -20,12 +20,12 @@ blindspot detector for a motorcycle*/
 #define triggerPin_2 8 //Arduino Pin 8, Atmega pin 14 to sensor header 5
 #define echoPin_2 9 //Arduino Pin 9, Atmega pin 15 to sensor header 6
 
-#define sensorCount 1 //Number of sensors, zero indexed (subtract 1 from total count)
+#define sensorCount 3 //Number of sensors, zero indexed (subtract 1 from total count)
 
 /*The mux() function takes in four arguments that represent a 4-bit binary code
 which will output the code to a multiplexer in order to control 16 outputs.
 Note that 0/false/LOW and 1/true/HIGH are interchangable*/
-void mux(bool bit0, bool bit1, bool bit2, bool bit3) {
+void mux(bool bit3, bool bit2, bool bit1, bool bit0) {
   digitalWrite(muxBit0, bit0);
   digitalWrite(muxBit1, bit1);
   digitalWrite(muxBit2, bit2);
@@ -54,11 +54,14 @@ bool change = false;
 int a, b, c, d;
 int newbin[] = {0,0,0};
 int oldbin[] = {0,0,0};
+int oldDistance[] = {0,0,0};
+int newDistance[] = {0,0,0}; 
+
 
 void loop() {
   for (int c=0; c<= sensorCount; c++) { //Loop for polling sensors, is this needed
     long duration = 0;
-    long distance = 0;
+    int distance = 0;
     /*This will poll the sensors*/
     digitalWrite(triggerPins[c], 0); //set trigger low
     delayMicroseconds(2); //low for 2 microseconds
@@ -69,99 +72,123 @@ void loop() {
     //speed travels at 1130 feet per second, so divide duration by 2 (out to in) and multiply by 442 microseconds per feet
     //distance = duration / 73.746 / 2; //distance is in feet, sound travels on foot in
     distance = duration / 876 / 2; //distance is in feet, sound travels one foot in 876 microseconds
-    if ( 0 < distance <= 5 ) {newbin[c] = 1;}
-    else if ( 5 < distance <= 10 ) {newbin[c] = 2;}
-    else if ( 10 < distance <= 20 ) {newbin[c] = 3;}
+    newDistance[c] = distance;
+    
+    if ( distance > 0 && distance <= 5 ) {newbin[c] = 1;}
+    else if ( distance >5 && distance <= 10 ) {newbin[c] = 2;}
+    else if ( distance > 10 && distance <= 20 ) {newbin[c] = 3;}
     else {newbin[c] = 0;}
     
-    if (oldbin[c] = newbin[c]) {change = false;};
+    if (oldbin[c] == newbin[c]) {change = false;}
+    else {change = true;}
+   
+     
     
     switch (c) {
       case 0: //sensor 1 left sensor
       if (change == true) {
-        if (distance < 20) {
+        mux(1,1,1,1);
+        delayMicroseconds(50);
+        if (distance < 20) { //green
           a=0;
-          b=1;
+          b=0;
           c=1;
-          d=0;
-          mux(a,b,c,d);
+          d=1;
+          mux(a,b,c,d);          
+          delayMicroseconds(50);
         }
-        if (distance < 10) {
-          a=0;
-          b=1;
+        if (distance < 10) { //yellow
+          a=1;
+          b=0;
           c=1;
-          d=0;
-          mux(a,b,c,d);
+          d=1;
+          mux(a,b,c,d);          
+          delayMicroseconds(50);
         }
-        if (distance < 5) {
+        if (distance < 5) { //red
           a=0;
           b=1;
-          c=1;
-          d=0;
-          mux(a,b,c,d);
+          c=0;
+          d=1;
+          mux(a,b,c,d);          
+          delayMicroseconds(50);
         }
       }
       else if (change == false) {
-         mux(a,b,c,d); //send last code
+         mux(0,0,1,0); //send last code
       }
       break;
       case 1: //sensor 2 right sensor
       if (change == true) {
-        if (distance < 20) {
+        mux(1,1,0,0);
+        delayMicroseconds(50);
+        if (distance < 20) { //green
           a=0;
-          b=1;
-          c=1;
+          b=0;
+          c=0;
           d=0;
           mux(a,b,c,d);
+          delayMicroseconds(50);
+
         }
-        if (distance < 10) {
-          a=0;
-          b=1;
-          c=1;
+        if (distance < 10) { //yellow
+          a=1;
+          b=0;
+          c=0;
           d=0;
           mux(a,b,c,d);
+          delayMicroseconds(50);
+
         }
-        if (distance < 5) {
+        if (distance < 5) { //red
           a=0;
           b=1;
-          c=1;
+          c=0;
           d=0;
-          mux(a,b,c,d);
+          mux(0,0,1,0);
+          delayMicroseconds(50);
         }
       }
-      else if (change == false) {
-         mux(a,b,c,d); //last code
+      else if (change == false) { //reset
+         mux(0,0,1,0); //last code
       }
       break;      
       case 2: //sensor 3 rear sensor
       if (change == true) {
-        if (distance < 20) {
+        mux(1,1,0,1);
+        delayMicroseconds(50);
+        if (distance < 20) { //green
           a=0;
-          b=1;
-          c=1;
-          d=0;
-          mux(a,b,c,d);
+          b=0;
+          c=0;
+          d=1;
+          mux(a,b,c,d);          
+          delayMicroseconds(50);
         }
-        if (distance < 10) {
-          a=0;
-          b=1;
-          c=1;
-          d=0;
-          mux(a,b,c,d);
+        if (distance < 10) { //yellow
+          a=1;
+          b=0;
+          c=0;
+          d=1;
+          mux(a,b,c,d);          
+          delayMicroseconds(50);
         }
-        if (distance < 5) {
+        if (distance < 5) {//red
           a=0;
           b=1;
-          c=1;
-          d=0;
-          mux(a,b,c,d);
+          c=0;
+          d=1;
+          mux(a,b,c,d);          
+          delayMicroseconds(50);
         }
       }
       else if (change == false) {
-         mux(a,b,c,d); //last code
+         mux(0,0,1,0); //last code
       }
       break;
     } // end of switch
+    mux(0,0,1,0); //last code
+    oldDistance[c] = newDistance[c];
     oldbin[c] = newbin[c];
   } //end of for
 } //end of void
