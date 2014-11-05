@@ -1,6 +1,6 @@
 Display:
 1.0 Initial Draft
-1.1 Added Bypass capacitors, removed LED pulldown resistors, added footprints.
+1.1 Added Bypass capacitors, SR Latches, removed LED pulldown resistors, added footprints.
 
 
 
