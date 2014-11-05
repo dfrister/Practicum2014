@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -9040,72 +9040,72 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="U$1" library="display" deviceset="2N7002" device=""/>
 <part name="REAR" library="display" deviceset="CD4043" device=""/>
 <part name="U$3" library="display" deviceset="HEF4067B" device=""/>
-<part name="LED1" library="display" deviceset="LED" device="3MM"/>
+<part name="LED1" library="display" deviceset="LED" device="3MM" value="G"/>
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY2" library="supply2" deviceset="VDD" device=""/>
 <part name="U$4" library="display" deviceset="2N7002" device=""/>
-<part name="LED2" library="display" deviceset="LED" device="3MM"/>
+<part name="LED2" library="display" deviceset="LED" device="3MM" value="Y"/>
 <part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY4" library="supply2" deviceset="VDD" device=""/>
 <part name="U$5" library="display" deviceset="2N7002" device=""/>
-<part name="LED3" library="display" deviceset="LED" device="3MM"/>
+<part name="LED3" library="display" deviceset="LED" device="3MM" value="R"/>
 <part name="SUPPLY5" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY6" library="supply2" deviceset="VDD" device=""/>
 <part name="SUPPLY7" library="supply2" deviceset="VDD" device=""/>
-<part name="C2" library="resistor" deviceset="C-EU" device="C1206"/>
+<part name="C2" library="resistor" deviceset="C-EU" device="C1206" value="0.1u"/>
 <part name="SUPPLY8" library="supply2" deviceset="GND" device=""/>
-<part name="C3" library="resistor" deviceset="C-EU" device="C1206"/>
-<part name="C4" library="resistor" deviceset="C-EU" device="C1206"/>
-<part name="C5" library="resistor" deviceset="C-EU" device="C1206"/>
+<part name="C3" library="resistor" deviceset="C-EU" device="C1206" value="0.1u"/>
+<part name="C4" library="resistor" deviceset="C-EU" device="C1206" value="0.1u"/>
+<part name="C5" library="resistor" deviceset="C-EU" device="C1206" value="0.1u"/>
 <part name="U$6" library="display" deviceset="2N7002" device=""/>
 <part name="RIGHT" library="display" deviceset="CD4043" device=""/>
-<part name="LED4" library="display" deviceset="LED" device="3MM"/>
+<part name="LED4" library="display" deviceset="LED" device="3MM" value="G"/>
 <part name="SUPPLY9" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY10" library="supply2" deviceset="VDD" device=""/>
 <part name="U$8" library="display" deviceset="2N7002" device=""/>
-<part name="LED5" library="display" deviceset="LED" device="3MM"/>
+<part name="LED5" library="display" deviceset="LED" device="3MM" value="Y"/>
 <part name="SUPPLY11" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY12" library="supply2" deviceset="VDD" device=""/>
 <part name="U$9" library="display" deviceset="2N7002" device=""/>
-<part name="LED6" library="display" deviceset="LED" device="3MM"/>
+<part name="LED6" library="display" deviceset="LED" device="3MM" value="R"/>
 <part name="SUPPLY13" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY14" library="supply2" deviceset="VDD" device=""/>
 <part name="SUPPLY15" library="supply2" deviceset="VDD" device=""/>
-<part name="C1" library="resistor" deviceset="C-EU" device="C1206"/>
+<part name="C1" library="resistor" deviceset="C-EU" device="C1206" value="0.1u"/>
 <part name="SUPPLY16" library="supply2" deviceset="GND" device=""/>
-<part name="C6" library="resistor" deviceset="C-EU" device="C1206"/>
-<part name="C7" library="resistor" deviceset="C-EU" device="C1206"/>
-<part name="C8" library="resistor" deviceset="C-EU" device="C1206"/>
+<part name="C6" library="resistor" deviceset="C-EU" device="C1206" value="0.1u"/>
+<part name="C7" library="resistor" deviceset="C-EU" device="C1206" value="0.1u"/>
+<part name="C8" library="resistor" deviceset="C-EU" device="C1206" value="0.1u"/>
 <part name="U$10" library="display" deviceset="2N7002" device=""/>
 <part name="LEFT" library="display" deviceset="CD4043" device=""/>
-<part name="LED7" library="display" deviceset="LED" device="3MM"/>
+<part name="LED7" library="display" deviceset="LED" device="3MM" value="G"/>
 <part name="SUPPLY17" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY18" library="supply2" deviceset="VDD" device=""/>
 <part name="U$12" library="display" deviceset="2N7002" device=""/>
-<part name="LED8" library="display" deviceset="LED" device="3MM"/>
+<part name="LED8" library="display" deviceset="LED" device="3MM" value="Y"/>
 <part name="SUPPLY19" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY20" library="supply2" deviceset="VDD" device=""/>
 <part name="U$13" library="display" deviceset="2N7002" device=""/>
-<part name="LED9" library="display" deviceset="LED" device="3MM"/>
+<part name="LED9" library="display" deviceset="LED" device="3MM" value="R"/>
 <part name="SUPPLY21" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY22" library="supply2" deviceset="VDD" device=""/>
 <part name="SUPPLY23" library="supply2" deviceset="VDD" device=""/>
-<part name="C9" library="resistor" deviceset="C-EU" device="C1206"/>
+<part name="C9" library="resistor" deviceset="C-EU" device="C1206" value="0.1u"/>
 <part name="SUPPLY24" library="supply2" deviceset="GND" device=""/>
-<part name="C10" library="resistor" deviceset="C-EU" device="C1206"/>
-<part name="C11" library="resistor" deviceset="C-EU" device="C1206"/>
-<part name="C12" library="resistor" deviceset="C-EU" device="C1206"/>
-<part name="C13" library="resistor" deviceset="C-EU" device="C1206"/>
-<part name="C14" library="resistor" deviceset="C-EU" device="C1206"/>
-<part name="R1" library="rcl" deviceset="R-US_" device="R1206"/>
-<part name="R2" library="rcl" deviceset="R-US_" device="R1206"/>
-<part name="R3" library="rcl" deviceset="R-US_" device="R1206"/>
-<part name="R4" library="rcl" deviceset="R-US_" device="R1206"/>
-<part name="R5" library="rcl" deviceset="R-US_" device="R1206"/>
-<part name="R6" library="rcl" deviceset="R-US_" device="R1206"/>
-<part name="R7" library="rcl" deviceset="R-US_" device="R1206"/>
-<part name="R8" library="rcl" deviceset="R-US_" device="R1206"/>
-<part name="R9" library="rcl" deviceset="R-US_" device="R1206"/>
+<part name="C10" library="resistor" deviceset="C-EU" device="C1206" value="0.1u"/>
+<part name="C11" library="resistor" deviceset="C-EU" device="C1206" value="0.1u"/>
+<part name="C12" library="resistor" deviceset="C-EU" device="C1206" value="0.1u"/>
+<part name="C13" library="resistor" deviceset="C-EU" device="C1206" value="0.1u"/>
+<part name="C14" library="resistor" deviceset="C-EU" device="C1206" value="0.1u"/>
+<part name="R1" library="rcl" deviceset="R-US_" device="R1206" value="150"/>
+<part name="R2" library="rcl" deviceset="R-US_" device="R1206" value="150"/>
+<part name="R3" library="rcl" deviceset="R-US_" device="R1206" value="150"/>
+<part name="R4" library="rcl" deviceset="R-US_" device="R1206" value="150"/>
+<part name="R5" library="rcl" deviceset="R-US_" device="R1206" value="150"/>
+<part name="R6" library="rcl" deviceset="R-US_" device="R1206" value="150"/>
+<part name="R7" library="rcl" deviceset="R-US_" device="R1206" value="150"/>
+<part name="R8" library="rcl" deviceset="R-US_" device="R1206" value="150"/>
+<part name="R9" library="rcl" deviceset="R-US_" device="R1206" value="150"/>
 </parts>
 <sheets>
 <sheet>
@@ -9942,6 +9942,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="115,1,215.796,139.596,FRAME1,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>

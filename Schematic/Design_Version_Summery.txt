@@ -1,0 +1,9 @@
+Display:
+1.0 Initial Draft
+1.1 Added Bypass capacitors, removed LED pulldown resistors, added footprints.
+
+
+
+Main Board:
+1.0 Initial Draft
+1.1 Added Bypass capacitors, added crystal for atmel Processor.

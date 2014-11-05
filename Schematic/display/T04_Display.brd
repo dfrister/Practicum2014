@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2604,11 +2604,8 @@ Please make sure your boards conform to these design rules.</description>
 <autorouter>
 <pass name="Default">
 <param name="RoutingGrid" value="50mil"/>
-<param name="AutoGrid" value="1"/>
-<param name="Efforts" value="0"/>
-<param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
-<param name="PrefDir.1" value="a"/>
+<param name="PrefDir.1" value="|"/>
 <param name="PrefDir.2" value="0"/>
 <param name="PrefDir.3" value="0"/>
 <param name="PrefDir.4" value="0"/>
@@ -2623,7 +2620,7 @@ Please make sure your boards conform to these design rules.</description>
 <param name="PrefDir.13" value="0"/>
 <param name="PrefDir.14" value="0"/>
 <param name="PrefDir.15" value="0"/>
-<param name="PrefDir.16" value="a"/>
+<param name="PrefDir.16" value="-"/>
 <param name="cfVia" value="8"/>
 <param name="cfNonPref" value="5"/>
 <param name="cfChangeDir" value="2"/>
@@ -2698,138 +2695,138 @@ Please make sure your boards conform to these design rules.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="C1" library="resistor" package="C1206" value="" x="62.23" y="30.988" smashed="yes" rot="R270">
+<element name="C1" library="resistor" package="C1206" value="0.1u" x="62.23" y="30.988" smashed="yes" rot="R270">
 <attribute name="SPICEPREFIX" value="C" x="62.23" y="30.988" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="63.373" y="32.258" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="59.817" y="32.258" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="C10" library="resistor" package="C1206" value="" x="15.24" y="27.178" rot="MR180">
+<element name="C10" library="resistor" package="C1206" value="0.1u" x="15.24" y="27.178" rot="MR180">
 <attribute name="SPICEPREFIX" value="C" x="15.24" y="27.178" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
-<element name="C11" library="resistor" package="C1206" value="" x="21.844" y="36.322" smashed="yes" rot="MR270">
+<element name="C11" library="resistor" package="C1206" value="0.1u" x="21.844" y="36.322" smashed="yes" rot="MR270">
 <attribute name="SPICEPREFIX" value="C" x="21.844" y="36.322" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="NAME" x="20.574" y="38.227" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="24.257" y="37.592" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="C12" library="resistor" package="C1206" value="" x="6.096" y="6.604" smashed="yes" rot="MR90">
+<element name="C12" library="resistor" package="C1206" value="0.1u" x="6.096" y="6.604" smashed="yes" rot="MR90">
 <attribute name="SPICEPREFIX" value="C" x="6.096" y="6.604" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="NAME" x="3.556" y="5.207" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="3.683" y="5.334" size="1.27" layer="28" rot="MR90"/>
 </element>
-<element name="C13" library="resistor" package="C1206" value="" x="25.019" y="29.337" smashed="yes" rot="R270">
+<element name="C13" library="resistor" package="C1206" value="0.1u" x="25.019" y="29.337" smashed="yes" rot="R270">
 <attribute name="SPICEPREFIX" value="C" x="25.019" y="29.337" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="26.162" y="30.607" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="22.606" y="30.607" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="C14" library="resistor" package="C1206" value="" x="29.21" y="29.337" smashed="yes" rot="R270">
+<element name="C14" library="resistor" package="C1206" value="0.1u" x="29.21" y="29.337" smashed="yes" rot="R270">
 <attribute name="SPICEPREFIX" value="C" x="29.21" y="29.337" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="30.353" y="30.607" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="26.797" y="30.607" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="C2" library="resistor" package="C1206" value="" x="53.34" y="17.78" smashed="yes" rot="R180">
+<element name="C2" library="resistor" package="C1206" value="0.1u" x="53.34" y="17.78" smashed="yes" rot="R180">
 <attribute name="SPICEPREFIX" value="C" x="53.34" y="17.78" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="54.356" y="20.574" size="1.27" layer="25" rot="R180"/>
 <attribute name="VALUE" x="54.61" y="20.193" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="C3" library="resistor" package="C1206" value="" x="44.45" y="24.13" smashed="yes" rot="MR0">
+<element name="C3" library="resistor" package="C1206" value="0.1u" x="44.45" y="24.13" smashed="yes" rot="MR0">
 <attribute name="SPICEPREFIX" value="C" x="44.45" y="24.13" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="NAME" x="45.72" y="25.273" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="45.72" y="21.717" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="C4" library="resistor" package="C1206" value="" x="39.37" y="44.45" rot="MR270">
+<element name="C4" library="resistor" package="C1206" value="0.1u" x="39.37" y="44.45" rot="MR270">
 <attribute name="SPICEPREFIX" value="C" x="39.37" y="44.45" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
-<element name="C5" library="resistor" package="C1206" value="" x="45.974" y="17.018" smashed="yes" rot="MR0">
+<element name="C5" library="resistor" package="C1206" value="0.1u" x="45.974" y="17.018" smashed="yes" rot="MR0">
 <attribute name="SPICEPREFIX" value="C" x="45.974" y="17.018" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="NAME" x="47.244" y="18.161" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="47.244" y="14.605" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="C6" library="resistor" package="C1206" value="" x="51.816" y="26.162" smashed="yes" rot="MR270">
+<element name="C6" library="resistor" package="C1206" value="0.1u" x="51.816" y="26.162" smashed="yes" rot="MR270">
 <attribute name="SPICEPREFIX" value="C" x="51.816" y="26.162" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="NAME" x="50.673" y="27.432" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="54.229" y="27.432" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="C7" library="resistor" package="C1206" value="" x="52.324" y="45.974" smashed="yes" rot="MR180">
+<element name="C7" library="resistor" package="C1206" value="0.1u" x="52.324" y="45.974" smashed="yes" rot="MR180">
 <attribute name="SPICEPREFIX" value="C" x="52.324" y="45.974" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="NAME" x="55.372" y="44.958" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="51.054" y="48.387" size="1.27" layer="28" rot="MR180"/>
 </element>
-<element name="C8" library="resistor" package="C1206" value="" x="67.056" y="11.176" smashed="yes" rot="MR270">
+<element name="C8" library="resistor" package="C1206" value="0.1u" x="67.056" y="11.176" smashed="yes" rot="MR270">
 <attribute name="SPICEPREFIX" value="C" x="67.056" y="11.176" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="NAME" x="68.453" y="10.414" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="69.469" y="12.446" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="C9" library="resistor" package="C1206" value="" x="7.874" y="31.496" smashed="yes" rot="MR0">
+<element name="C9" library="resistor" package="C1206" value="0.1u" x="7.874" y="31.496" smashed="yes" rot="MR0">
 <attribute name="SPICEPREFIX" value="C" x="7.874" y="31.496" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="NAME" x="7.874" y="33.147" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="9.144" y="29.083" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="LED1" library="display" package="LED3MM" value="" x="38.1" y="11.43" smashed="yes">
+<element name="LED1" library="display" package="LED3MM" value="G" x="38.1" y="11.43" smashed="yes">
 <attribute name="NAME" x="36.068" y="7.366" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="40.005" y="9.779" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="LED2" library="display" package="LED3MM" value="" x="38.1" y="25.4" smashed="yes">
+<element name="LED2" library="display" package="LED3MM" value="Y" x="38.1" y="25.4" smashed="yes">
 <attribute name="NAME" x="35.433" y="21.59" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="40.005" y="23.749" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="LED3" library="display" package="LED3MM" value="" x="38.1" y="38.1" smashed="yes">
+<element name="LED3" library="display" package="LED3MM" value="R" x="38.1" y="38.1" smashed="yes">
 <attribute name="NAME" x="36.195" y="40.513" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="40.005" y="36.449" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="LED4" library="display" package="LED3MM" value="" x="66.04" y="16.51" smashed="yes">
+<element name="LED4" library="display" package="LED3MM" value="G" x="66.04" y="16.51" smashed="yes">
 <attribute name="NAME" x="64.262" y="19.05" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="67.945" y="14.859" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="LED5" library="display" package="LED3MM" value="" x="55.88" y="27.94" smashed="yes">
+<element name="LED5" library="display" package="LED3MM" value="Y" x="55.88" y="27.94" smashed="yes">
 <attribute name="NAME" x="53.594" y="24.003" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="57.785" y="26.289" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="LED6" library="display" package="LED3MM" value="" x="46.99" y="38.1" smashed="yes">
+<element name="LED6" library="display" package="LED3MM" value="R" x="46.99" y="38.1" smashed="yes">
 <attribute name="NAME" x="46.228" y="40.64" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="48.895" y="36.449" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="LED7" library="display" package="LED3MM" value="" x="10.16" y="16.51" rot="R180"/>
-<element name="LED8" library="display" package="LED3MM" value="" x="20.32" y="27.94" smashed="yes">
+<element name="LED7" library="display" package="LED3MM" value="G" x="10.16" y="16.51" rot="R180"/>
+<element name="LED8" library="display" package="LED3MM" value="Y" x="20.32" y="27.94" smashed="yes">
 <attribute name="NAME" x="18.669" y="24.384" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="22.225" y="26.289" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="LED9" library="display" package="LED3MM" value="" x="29.21" y="38.1" smashed="yes">
+<element name="LED9" library="display" package="LED3MM" value="R" x="29.21" y="38.1" smashed="yes">
 <attribute name="NAME" x="27.305" y="40.513" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="31.115" y="36.449" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="R1" library="rcl" package="R1206" value="" x="9.906" y="12.192" smashed="yes" rot="MR180">
+<element name="R1" library="rcl" package="R1206" value="150" x="9.906" y="12.192" smashed="yes" rot="MR180">
 <attribute name="NAME" x="12.827" y="11.049" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="8.636" y="14.732" size="1.27" layer="28" rot="MR180"/>
 </element>
-<element name="R2" library="rcl" package="R1206" value="" x="17.78" y="32.004" smashed="yes" rot="MR0">
+<element name="R2" library="rcl" package="R1206" value="150" x="17.78" y="32.004" smashed="yes" rot="MR0">
 <attribute name="NAME" x="21.844" y="33.274" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="19.05" y="29.464" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="R3" library="rcl" package="R1206" value="" x="26.162" y="34.29" smashed="yes" rot="MR0">
+<element name="R3" library="rcl" package="R1206" value="150" x="26.162" y="34.29" smashed="yes" rot="MR0">
 <attribute name="NAME" x="26.924" y="35.687" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="27.432" y="31.75" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="R4" library="rcl" package="R1206" value="" x="39.624" y="14.986" smashed="yes" rot="MR180">
+<element name="R4" library="rcl" package="R1206" value="150" x="39.624" y="14.986" smashed="yes" rot="MR180">
 <attribute name="NAME" x="38.227" y="17.526" size="1.27" layer="26" rot="MR180"/>
 <attribute name="VALUE" x="38.354" y="17.526" size="1.27" layer="28" rot="MR180"/>
 </element>
-<element name="R5" library="rcl" package="R1206" value="" x="37.846" y="29.718" smashed="yes" rot="MR180">
+<element name="R5" library="rcl" package="R1206" value="150" x="37.846" y="29.718" smashed="yes" rot="MR180">
 <attribute name="NAME" x="36.957" y="32.385" size="1.27" layer="26" rot="MR180"/>
 <attribute name="VALUE" x="36.576" y="32.258" size="1.27" layer="28" rot="MR180"/>
 </element>
-<element name="R6" library="rcl" package="R1206" value="" x="34.036" y="37.592" smashed="yes" rot="MR90">
+<element name="R6" library="rcl" package="R1206" value="150" x="34.036" y="37.592" smashed="yes" rot="MR90">
 <attribute name="NAME" x="32.766" y="41.402" size="1.27" layer="26" rot="MR180"/>
 <attribute name="VALUE" x="31.496" y="36.322" size="1.27" layer="28" rot="MR90"/>
 </element>
-<element name="R7" library="rcl" package="R1206" value="" x="42.926" y="38.354" smashed="yes" rot="MR90">
+<element name="R7" library="rcl" package="R1206" value="150" x="42.926" y="38.354" smashed="yes" rot="MR90">
 <attribute name="NAME" x="42.164" y="42.418" size="1.27" layer="26" rot="MR180"/>
 <attribute name="VALUE" x="40.386" y="37.084" size="1.27" layer="28" rot="MR90"/>
 </element>
-<element name="R8" library="rcl" package="R1206" value="" x="56.642" y="32.766" smashed="yes" rot="MR0">
+<element name="R8" library="rcl" package="R1206" value="150" x="56.642" y="32.766" smashed="yes" rot="MR0">
 <attribute name="NAME" x="57.912" y="34.036" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="57.912" y="30.226" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="R9" library="rcl" package="R1206" value="" x="61.722" y="16.764" smashed="yes" rot="MR270">
+<element name="R9" library="rcl" package="R1206" value="150" x="61.722" y="16.764" smashed="yes" rot="MR270">
 <attribute name="NAME" x="60.452" y="18.034" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="64.262" y="18.034" size="1.27" layer="28" rot="MR270"/>
 </element>
