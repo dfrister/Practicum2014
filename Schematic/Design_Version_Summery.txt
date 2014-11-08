@@ -1,7 +1,7 @@
 Display:
 1.0 Initial Draft
 1.1 Added Bypass capacitors, SR Latches, removed LED pulldown resistors, added footprints.
-
+1.2 Added pulldown resistors for demux output, moved FETs to last componant in chain.
 
 
 Main Board:
