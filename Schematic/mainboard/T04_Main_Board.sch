@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.3">
+<eagle version="7.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="2" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,17 +39,17 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -8152,24 +8152,6 @@ Used, eg, on the Arduino Pro/ Pro Mini boards.&lt;br&gt;
 <text x="-2.54" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
 <text x="-2.54" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
 </package>
-<package name="22-23-2061">
-<description>.100" (2.54mm) Center Header - 6 Pin</description>
-<wire x1="-7.62" y1="3.175" x2="7.62" y2="3.175" width="0.254" layer="21"/>
-<wire x1="7.62" y1="3.175" x2="7.62" y2="1.27" width="0.254" layer="21"/>
-<wire x1="7.62" y1="1.27" x2="7.62" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="7.62" y1="-3.175" x2="-7.62" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="-7.62" y1="-3.175" x2="-7.62" y2="1.27" width="0.254" layer="21"/>
-<wire x1="-7.62" y1="1.27" x2="-7.62" y2="3.175" width="0.254" layer="21"/>
-<wire x1="-7.62" y1="1.27" x2="7.62" y2="1.27" width="0.254" layer="21"/>
-<pad name="1" x="-6.35" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="2" x="-3.81" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="3" x="-1.27" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="4" x="1.27" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="5" x="3.81" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="6" x="6.35" y="0" drill="1" shape="long" rot="R90"/>
-<text x="-7.62" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
-<text x="-7.62" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
-</package>
 <package name="22-23-2081">
 <description>.100" (2.54mm) Center Header - 8 Pin</description>
 <wire x1="-10.16" y1="3.175" x2="10.16" y2="3.175" width="0.254" layer="21"/>
@@ -8189,6 +8171,25 @@ Used, eg, on the Arduino Pro/ Pro Mini boards.&lt;br&gt;
 <pad name="8" x="8.89" y="0" drill="1" shape="long" rot="R90"/>
 <text x="-10.16" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
 <text x="-10.16" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+<package name="22-23-2071">
+<description>.100" (2.54mm) Center Header - 7 Pin</description>
+<wire x1="-8.89" y1="3.175" x2="8.89" y2="3.175" width="0.254" layer="21"/>
+<wire x1="8.89" y1="3.175" x2="8.89" y2="1.27" width="0.254" layer="21"/>
+<wire x1="8.89" y1="1.27" x2="8.89" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="8.89" y1="-3.175" x2="-8.89" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="-8.89" y1="-3.175" x2="-8.89" y2="1.27" width="0.254" layer="21"/>
+<wire x1="-8.89" y1="1.27" x2="-8.89" y2="3.175" width="0.254" layer="21"/>
+<wire x1="-8.89" y1="1.27" x2="8.89" y2="1.27" width="0.254" layer="21"/>
+<pad name="1" x="-7.62" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="2" x="-5.08" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="3" x="-2.54" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="4" x="0" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="5" x="2.54" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="6" x="5.08" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="7" x="7.62" y="0" drill="1" shape="long" rot="R90"/>
+<text x="-8.89" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
+<text x="-8.89" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -8228,37 +8229,6 @@ Used, eg, on the Arduino Pro/ Pro Mini boards.&lt;br&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="22-23-2061" prefix="X" uservalue="yes">
-<description>.100" (2.54mm) Center Header - 6 Pin</description>
-<gates>
-<gate name="-1" symbol="MV" x="0" y="5.08" addlevel="always" swaplevel="1"/>
-<gate name="-2" symbol="M" x="0" y="2.54" addlevel="always" swaplevel="1"/>
-<gate name="-3" symbol="M" x="0" y="0" addlevel="always" swaplevel="1"/>
-<gate name="-4" symbol="M" x="0" y="-2.54" addlevel="always" swaplevel="1"/>
-<gate name="-5" symbol="M" x="0" y="-5.08" addlevel="always" swaplevel="1"/>
-<gate name="-6" symbol="M" x="0" y="-7.62" addlevel="always" swaplevel="1"/>
-</gates>
-<devices>
-<device name="" package="22-23-2061">
-<connects>
-<connect gate="-1" pin="S" pad="1"/>
-<connect gate="-2" pin="S" pad="2"/>
-<connect gate="-3" pin="S" pad="3"/>
-<connect gate="-4" pin="S" pad="4"/>
-<connect gate="-5" pin="S" pad="5"/>
-<connect gate="-6" pin="S" pad="6"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="MOLEX" constant="no"/>
-<attribute name="MPN" value="22-23-2061" constant="no"/>
-<attribute name="OC_FARNELL" value="1462922" constant="no"/>
-<attribute name="OC_NEWARK" value="27C1933" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="22-23-2081" prefix="X">
 <description>.100" (2.54mm) Center Header - 8 Pin</description>
 <gates>
@@ -8289,6 +8259,39 @@ Used, eg, on the Arduino Pro/ Pro Mini boards.&lt;br&gt;
 <attribute name="MPN" value="22-23-2081" constant="no"/>
 <attribute name="OC_FARNELL" value="1756826" constant="no"/>
 <attribute name="OC_NEWARK" value="01C7592" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="22-23-2071" prefix="X">
+<description>.100" (2.54mm) Center Header - 7 Pin</description>
+<gates>
+<gate name="-1" symbol="MV" x="0" y="7.62" addlevel="always" swaplevel="1"/>
+<gate name="-2" symbol="M" x="0" y="5.08" addlevel="always" swaplevel="1"/>
+<gate name="-3" symbol="M" x="0" y="2.54" addlevel="always" swaplevel="1"/>
+<gate name="-4" symbol="M" x="0" y="0" addlevel="always" swaplevel="1"/>
+<gate name="-5" symbol="M" x="0" y="-2.54" addlevel="always" swaplevel="1"/>
+<gate name="-6" symbol="M" x="0" y="-5.08" addlevel="always" swaplevel="1"/>
+<gate name="-7" symbol="M" x="0" y="-7.62" addlevel="always" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="22-23-2071">
+<connects>
+<connect gate="-1" pin="S" pad="1"/>
+<connect gate="-2" pin="S" pad="2"/>
+<connect gate="-3" pin="S" pad="3"/>
+<connect gate="-4" pin="S" pad="4"/>
+<connect gate="-5" pin="S" pad="5"/>
+<connect gate="-6" pin="S" pad="6"/>
+<connect gate="-7" pin="S" pad="7"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="MOLEX" constant="no"/>
+<attribute name="MPN" value="22-23-2071" constant="no"/>
+<attribute name="OC_FARNELL" value="1654534" constant="no"/>
+<attribute name="OC_NEWARK" value="56H0445" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -8341,7 +8344,6 @@ Used, eg, on the Arduino Pro/ Pro Mini boards.&lt;br&gt;
 <part name="C4" library="rcl" deviceset="C-EU" device="025-024X044" value="0.1u"/>
 <part name="Y1" library="SparkFun-FreqCtrl" deviceset="RESONATOR" device="16MHZ" value="16MHZ"/>
 <part name="X1" library="con-molex" deviceset="22-23-2021" device=""/>
-<part name="X2" library="con-molex" deviceset="22-23-2061" device=""/>
 <part name="X3" library="con-molex" deviceset="22-23-2081" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="C5" library="rcl" deviceset="C-EU" device="025-024X044" value="0.1u"/>
@@ -8353,6 +8355,7 @@ Used, eg, on the Arduino Pro/ Pro Mini boards.&lt;br&gt;
 <part name="C8" library="rcl" deviceset="C-EU" device="025-024X044" value=".1u"/>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
+<part name="X2" library="con-molex" deviceset="22-23-2071" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8422,18 +8425,12 @@ Noah Erickson
 <instance part="TP12" gate="G$1" x="86.36" y="193.04"/>
 <instance part="C3" gate="G$1" x="281.94" y="119.38"/>
 <instance part="P+4" gate="1" x="132.08" y="195.58"/>
-<instance part="GND4" gate="1" x="281.94" y="149.86"/>
-<instance part="P+1" gate="1" x="281.94" y="162.56"/>
-<instance part="C4" gate="G$1" x="281.94" y="157.48"/>
+<instance part="GND4" gate="1" x="281.94" y="144.78"/>
+<instance part="P+1" gate="1" x="281.94" y="160.02"/>
+<instance part="C4" gate="G$1" x="281.94" y="154.94"/>
 <instance part="Y1" gate="G$1" x="190.5" y="137.16" rot="R270"/>
 <instance part="X1" gate="-1" x="66.04" y="190.5" rot="MR0"/>
 <instance part="X1" gate="-2" x="66.04" y="187.96" rot="MR0"/>
-<instance part="X2" gate="-1" x="304.8" y="172.72"/>
-<instance part="X2" gate="-2" x="304.8" y="170.18"/>
-<instance part="X2" gate="-3" x="304.8" y="167.64"/>
-<instance part="X2" gate="-4" x="304.8" y="165.1"/>
-<instance part="X2" gate="-5" x="304.8" y="162.56"/>
-<instance part="X2" gate="-6" x="304.8" y="160.02"/>
 <instance part="X3" gate="-1" x="304.8" y="139.7"/>
 <instance part="X3" gate="-2" x="304.8" y="137.16"/>
 <instance part="X3" gate="-3" x="304.8" y="134.62"/>
@@ -8452,6 +8449,13 @@ Noah Erickson
 <instance part="C8" gate="G$1" x="162.56" y="177.8" rot="R180"/>
 <instance part="P+3" gate="1" x="271.78" y="208.28"/>
 <instance part="GND9" gate="1" x="284.48" y="203.2"/>
+<instance part="X2" gate="-1" x="304.8" y="172.72"/>
+<instance part="X2" gate="-2" x="304.8" y="170.18"/>
+<instance part="X2" gate="-3" x="304.8" y="167.64"/>
+<instance part="X2" gate="-4" x="304.8" y="165.1"/>
+<instance part="X2" gate="-5" x="304.8" y="162.56"/>
+<instance part="X2" gate="-6" x="304.8" y="160.02"/>
+<instance part="X2" gate="-7" x="304.8" y="157.48"/>
 </instances>
 <busses>
 </busses>
@@ -8503,15 +8507,17 @@ Noah Erickson
 <segment>
 <pinref part="C4" gate="G$1" pin="2"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="294.64" y1="160.02" x2="287.02" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="287.02" y1="160.02" x2="287.02" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="287.02" y1="152.4" x2="281.94" y2="152.4" width="0.1524" layer="91"/>
-<junction x="281.94" y="152.4"/>
-<wire x1="302.26" y1="160.02" x2="294.64" y2="160.02" width="0.1524" layer="91"/>
-<label x="294.64" y="160.02" size="1.778" layer="95"/>
-<junction x="294.64" y="160.02"/>
-<wire x1="294.64" y1="160.02" x2="289.56" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="X2" gate="-6" pin="S"/>
+<wire x1="294.64" y1="157.48" x2="287.02" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="157.48" x2="287.02" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="149.86" x2="281.94" y2="149.86" width="0.1524" layer="91"/>
+<junction x="281.94" y="149.86"/>
+<wire x1="302.26" y1="157.48" x2="294.64" y2="157.48" width="0.1524" layer="91"/>
+<label x="294.64" y="157.48" size="1.778" layer="95"/>
+<junction x="294.64" y="157.48"/>
+<wire x1="294.64" y1="157.48" x2="289.56" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="281.94" y1="149.86" x2="281.94" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="X2" gate="-7" pin="S"/>
+<junction x="302.26" y="157.48"/>
 </segment>
 <segment>
 <pinref part="Y1" gate="G$1" pin="2"/>
@@ -8578,15 +8584,16 @@ Noah Erickson
 <segment>
 <pinref part="P+1" gate="1" pin="+5V"/>
 <pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="294.64" y1="162.56" x2="284.48" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="284.48" y1="162.56" x2="284.48" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="284.48" y1="160.02" x2="281.94" y2="160.02" width="0.1524" layer="91"/>
-<junction x="281.94" y="160.02"/>
-<wire x1="302.26" y1="162.56" x2="294.64" y2="162.56" width="0.1524" layer="91"/>
-<label x="294.64" y="162.56" size="1.778" layer="95"/>
-<junction x="294.64" y="162.56"/>
-<wire x1="294.64" y1="162.56" x2="287.02" y2="162.56" width="0.1524" layer="91"/>
-<pinref part="X2" gate="-5" pin="S"/>
+<wire x1="294.64" y1="160.02" x2="284.48" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="284.48" y1="160.02" x2="284.48" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="284.48" y1="157.48" x2="281.94" y2="157.48" width="0.1524" layer="91"/>
+<junction x="281.94" y="157.48"/>
+<wire x1="302.26" y1="160.02" x2="294.64" y2="160.02" width="0.1524" layer="91"/>
+<label x="294.64" y="160.02" size="1.778" layer="95"/>
+<junction x="294.64" y="160.02"/>
+<wire x1="294.64" y1="160.02" x2="287.02" y2="160.02" width="0.1524" layer="91"/>
+<pinref part="X2" gate="-6" pin="S"/>
+<junction x="302.26" y="160.02"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="AVCC"/>
@@ -8710,12 +8717,13 @@ Noah Erickson
 <wire x1="274.32" y1="172.72" x2="276.86" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="276.86" y1="172.72" x2="302.26" y2="172.72" width="0.1524" layer="91"/>
 <junction x="276.86" y="172.72"/>
-<pinref part="X2" gate="-1" pin="S"/>
 <pinref part="JP1" gate="G$1" pin="RXI"/>
 <wire x1="274.32" y1="172.72" x2="274.32" y2="195.58" width="0.1524" layer="91"/>
 <wire x1="274.32" y1="195.58" x2="299.72" y2="195.58" width="0.1524" layer="91"/>
 <junction x="274.32" y="172.72"/>
 <label x="294.64" y="195.58" size="1.778" layer="95"/>
+<pinref part="X2" gate="-1" pin="S"/>
+<junction x="302.26" y="172.72"/>
 </segment>
 </net>
 <net name="BIT1" class="0">
@@ -8731,11 +8739,12 @@ Noah Erickson
 <label x="294.64" y="170.18" size="1.778" layer="95"/>
 <pinref part="TP3" gate="G$1" pin="TP"/>
 <junction x="279.4" y="170.18"/>
-<pinref part="X2" gate="-2" pin="S"/>
 <wire x1="299.72" y1="198.12" x2="271.78" y2="198.12" width="0.1524" layer="91"/>
 <wire x1="271.78" y1="198.12" x2="271.78" y2="170.18" width="0.1524" layer="91"/>
 <junction x="271.78" y="170.18"/>
 <label x="294.64" y="198.12" size="1.778" layer="95"/>
+<pinref part="X2" gate="-2" pin="S"/>
+<junction x="302.26" y="170.18"/>
 </segment>
 </net>
 <net name="BIT2" class="0">
@@ -8750,6 +8759,7 @@ Noah Erickson
 <pinref part="TP4" gate="G$1" pin="TP"/>
 <junction x="281.94" y="167.64"/>
 <pinref part="X2" gate="-3" pin="S"/>
+<junction x="302.26" y="167.64"/>
 </segment>
 </net>
 <net name="BIT3" class="0">
@@ -8764,6 +8774,7 @@ Noah Erickson
 <pinref part="TP5" gate="G$1" pin="TP"/>
 <junction x="284.48" y="165.1"/>
 <pinref part="X2" gate="-4" pin="S"/>
+<junction x="302.26" y="165.1"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -8864,6 +8875,18 @@ Noah Erickson
 <pinref part="JP1" gate="G$1" pin="DTR"/>
 <wire x1="299.72" y1="193.04" x2="294.64" y2="193.04" width="0.1524" layer="91"/>
 <label x="294.64" y="193.04" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="MUXENABLE" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PB2(SS/OC1B)"/>
+<wire x1="241.3" y1="114.3" x2="276.86" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="276.86" y1="114.3" x2="276.86" y2="162.56" width="0.1524" layer="91"/>
+<pinref part="X2" gate="-5" pin="S"/>
+<wire x1="302.26" y1="162.56" x2="276.86" y2="162.56" width="0.1524" layer="91"/>
+<label x="241.3" y="114.3" size="1.778" layer="95"/>
+<label x="287.02" y="162.56" size="1.778" layer="95"/>
+<junction x="302.26" y="162.56"/>
 </segment>
 </net>
 </nets>
