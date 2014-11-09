@@ -19,17 +19,21 @@ blindspot detector for a motorcycle*/
 #define echoPin_1 7 //Arduino Pin 7, Atmega pin 13 to sensor header 4
 #define triggerPin_2 8 //Arduino Pin 8, Atmega pin 14 to sensor header 5
 #define echoPin_2 9 //Arduino Pin 9, Atmega pin 15 to sensor header 6
-
+#define enable 10
 #define sensorCount 2 //Number of sensors, zero indexed (subtract 1 from total count)
 
 /*The mux() function takes in four arguments that represent a 4-bit binary code
 which will output the code to a multiplexer in order to control 16 outputs.
 Note that 0/false/LOW and 1/true/HIGH are interchangable*/
 void mux(bool bit3, bool bit2, bool bit1, bool bit0) {
-  digitalWrite(muxBit0, bit0);
   digitalWrite(muxBit1, bit1);
   digitalWrite(muxBit2, bit2);
   digitalWrite(muxBit3, bit3);
+  delayMicroseconds(100);
+  digitalWrite(enable,0);
+  delayMicroseconds(100);
+  digitalWrite(enable,1);
+  delayMicroseconds(100);
 }
 /*Variables for the setup and loop function)*/
 int triggerPins[] = {triggerPin_0, triggerPin_1, triggerPin_2};
@@ -47,6 +51,7 @@ void setup() {
   pinMode(echoPin_1, INPUT); //Set sensor 2 Echo as an input  
   pinMode(triggerPin_2, OUTPUT); //Set Sensor 3 Trigger as an output
   pinMode(echoPin_2, INPUT); //Set sensor 3 Echo as an input
+  pinMode(enable, OUTPUT);
 }
 
 /*Variables for checking if the state changed*/
@@ -61,7 +66,7 @@ int newDistance[] = {0,0,0};
 void loop() {
   for (int c=0; c<= sensorCount; c++) { //Loop for polling sensors, is this needed
     long duration = 0;
-    int distance = 0;
+    float distance = 0;
     /*This will poll the sensors*/
     digitalWrite(triggerPins[c], 0); //set trigger low
     delayMicroseconds(2); //low for 2 microseconds
@@ -74,22 +79,26 @@ void loop() {
     distance = duration / 876 / 2; //distance is in feet, sound travels one foot in 876 microseconds
     newDistance[c] = distance;
     
-    if ( distance > 0 && distance <= 5 ) {newbin[c] = 1;}
-    else if ( distance >5 && distance <= 10 ) {newbin[c] = 2;}
-    else if ( distance > 10 && distance <= 20 ) {newbin[c] = 3;}
+    if ( distance > 0 && distance <= 0.25 ) {newbin[c] = 1;}
+    else if ( distance >5 && distance <= 0.5 ) {newbin[c] = 2;}
+    else if ( distance > 10 && distance <= 0.75 ) {newbin[c] = 3;}
     else {newbin[c] = 0;}
     
     if (oldbin[c] == newbin[c]) {change = false;}
     else {change = true;}
    
      
+    mux(0,1,1,1);
+    mux(0,0,1,1);
+    mux(1,0,1,1);
+    delay(500);
     
     switch (c) {
       case 0: //sensor 1 left sensor
       if (change == true) {
         mux(1,1,1,1);
         delayMicroseconds(50);
-        if (distance < 20) { //green
+        if (distance < 3) { //green
           a=0;
           b=0;
           c=1;
@@ -97,7 +106,7 @@ void loop() {
           mux(a,b,c,d);          
           delayMicroseconds(50);
         }
-        if (distance < 10) { //yellow
+        if (distance < 2) { //yellow
           a=1;
           b=0;
           c=1;
@@ -105,7 +114,7 @@ void loop() {
           mux(a,b,c,d);          
           delayMicroseconds(50);
         }
-        if (distance < 5) { //red
+        if (distance < 1) { //red
           a=0;
           b=1;
           c=0;
@@ -122,7 +131,7 @@ void loop() {
       if (change == true) {
         mux(1,1,0,0);
         delayMicroseconds(50);
-        if (distance < 20) { //green
+        if (distance < 3) { //green
           a=0;
           b=0;
           c=0;
@@ -131,7 +140,7 @@ void loop() {
           delayMicroseconds(50);
 
         }
-        if (distance < 10) { //yellow
+        if (distance < 2) { //yellow
           a=1;
           b=0;
           c=0;
@@ -140,7 +149,7 @@ void loop() {
           delayMicroseconds(50);
 
         }
-        if (distance < 5) { //red
+        if (distance < 1) { //red
           a=0;
           b=1;
           c=0;
@@ -157,7 +166,7 @@ void loop() {
       if (change == true) {
         mux(1,1,0,1);
         delayMicroseconds(50);
-        if (distance < 20) { //green
+        if (distance < 3) { //green
           a=0;
           b=0;
           c=0;
@@ -165,7 +174,7 @@ void loop() {
           mux(a,b,c,d);          
           delayMicroseconds(50);
         }
-        if (distance < 10) { //yellow
+        if (distance < 2) { //yellow
           a=1;
           b=0;
           c=0;
@@ -173,7 +182,7 @@ void loop() {
           mux(a,b,c,d);          
           delayMicroseconds(50);
         }
-        if (distance < 5) {//red
+        if (distance < 1) {//red
           a=0;
           b=1;
           c=0;
