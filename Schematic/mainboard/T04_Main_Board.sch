@@ -8453,7 +8453,7 @@ Noah Erickson
 <instance part="X2" gate="-2" x="304.8" y="170.18"/>
 <instance part="X2" gate="-3" x="304.8" y="167.64"/>
 <instance part="X2" gate="-4" x="304.8" y="165.1"/>
-<instance part="X2" gate="-5" x="304.8" y="162.56"/>
+<instance part="X2" gate="-5" x="304.8" y="162.56" rot="R180"/>
 <instance part="X2" gate="-6" x="304.8" y="160.02"/>
 <instance part="X2" gate="-7" x="304.8" y="157.48"/>
 </instances>
@@ -8880,13 +8880,15 @@ Noah Erickson
 <net name="MUXENABLE" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="PB2(SS/OC1B)"/>
-<wire x1="241.3" y1="114.3" x2="276.86" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="276.86" y1="114.3" x2="276.86" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="114.3" x2="266.7" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="266.7" y1="114.3" x2="266.7" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="266.7" y1="111.76" x2="325.12" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="325.12" y1="111.76" x2="325.12" y2="162.56" width="0.1524" layer="91"/>
 <pinref part="X2" gate="-5" pin="S"/>
-<wire x1="302.26" y1="162.56" x2="276.86" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="307.34" y1="162.56" x2="325.12" y2="162.56" width="0.1524" layer="91"/>
 <label x="241.3" y="114.3" size="1.778" layer="95"/>
-<label x="287.02" y="162.56" size="1.778" layer="95"/>
-<junction x="302.26" y="162.56"/>
+<label x="309.88" y="162.56" size="1.778" layer="95"/>
+<junction x="307.34" y="162.56"/>
 </segment>
 </net>
 </nets>
@@ -8894,6 +8896,7 @@ Noah Erickson
 </sheets>
 <errors>
 <approved hash="106,1,299.72,203.2,CTS,,,,,"/>
+<approved hash="111,1,281.94,111.76,MUXENABLE,,,,,"/>
 <approved hash="111,1,279.4,172.72,BIT0,,,,,"/>
 <approved hash="111,1,281.94,170.18,BIT1,,,,,"/>
 <approved hash="111,1,284.48,167.64,BIT2,,,,,"/>
@@ -8902,10 +8905,8 @@ Noah Erickson
 <approved hash="111,1,271.78,134.62,TRIG2,,,,,"/>
 <approved hash="111,1,274.32,132.08,ECHO2,,,,,"/>
 <approved hash="111,1,276.86,129.54,TRIG3,,,,,"/>
-<approved hash="115,1,215.796,139.596,FRAME1,,,,,"/>
-<approved hash="115,1,305.198,172.72,X2,,,,,"/>
-<approved hash="115,1,304.013,200.855,JP1,,,,,"/>
-<approved hash="113,1,186.224,134.85,VALUE,Y1,,,,"/>
+<approved hash="113,1,215.796,139.596,FRAME1,,,,,"/>
+<approved hash="113,1,304.013,200.855,JP1,,,,,"/>
 </errors>
 </schematic>
 </drawing>

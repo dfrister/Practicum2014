@@ -21,6 +21,10 @@ blindspot detector for a motorcycle*/
 #define echoPin_rear 9 //Arduino Pin 9, Atmega pin 15 to sensor header 6 //REAR
 #define enable 10 //Arduino pin 10, Atmega pin 16, to mux enable
 
+#define farDist 12
+#define midDist 8
+#define closeDist 4
+
 /*The mux() function takes in four arguments that represent a 4-bit binary code
 which will output the code to a multiplexer in order to control 16 outputs.
 Note that 0/false/LOW and 1/true/HIGH are interchangable*/
@@ -51,6 +55,28 @@ void setup() {
   pinMode(triggerPin_rear, OUTPUT); //Set Sensor 3 Trigger as an output
   pinMode(echoPin_rear, INPUT); //Set sensor 3 Echo as an input
   pinMode(enable, OUTPUT);
+  /*
+  mux(0,1,0,0); //reset all
+  mux(1,0,1,1);
+  mux(1,1,1,1);
+  delay(100);
+  mux(0,0,0,1); //set greens
+  mux(1,0,0,0);
+  mux(1,1,0,0);
+  delay(100);
+  mux(1,1,0,1); //set yellows
+  mux(1,0,0,1);
+  mux(0,0,1,0);
+  delay(100);  
+  mux(0,0,1,1); //set reds
+  mux(1,0,1,0);
+  mux(1,1,1,0);
+  delay(3000); wait 3 seconds
+  mux(0,1,0,0); //reset all
+  mux(1,0,1,1);
+  mux(1,1,1,1);
+
+
 }
 
 /*Variables for checking if the state changed*/
@@ -96,39 +122,39 @@ void loop() {
   mux(1,1,1,1);*/
      
      
-  if (distance_left < 3) { //green
+  if (distance_left < farDist) { //green
     mux(0,0,0,1);
   }
-  if (distance_left < 2) { //yellow
+  if (distance_left < midDist) { //yellow
     mux(0,0,1,0);          
   }
-  if (distance_left < 1) { //red
+  if (distance_left < closeDist) { //red
     mux(0,0,1,1);          
   }
   else if (distance_left == 0 || distance_left > 3) {
     mux(0,1,0,0);
   }
   
-  if (distance_right < 3) { //green
+  if (distance_right < farDist) { //green
     mux(1,0,0,0);
   }
-  if (distance_right < 2) { //yellow
+  if (distance_right < midDist) { //yellow
     mux(1,0,0,1);          
   }
-  if (distance_right < 1) { //red
+  if (distance_right < closeDist) { //red
     mux(1,0,1,0);          
   }
   else if ( distance_right == 0 || distance_right > 3) {
     mux(1,0,1,1);
   }
   
-  if (distance_rear < 3) { //green
+  if (distance_rear < farDist) { //green
     mux(1,1,0,0);
   }
-  if (distance_rear < 2) { //yellow
+  if (distance_rear < midDist) { //yellow
     mux(1,1,0,1);          
   }
-  if (distance_rear < 1) { //red
+  if (distance_rear < closeDist) { //red
     mux(1,1,1,0);          
   }
   else if ( distance_rear == 0 || distance_rear > 3) {
