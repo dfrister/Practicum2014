@@ -1,0 +1,22 @@
+Main Board Schematic:
+1.0 Initial Draft
+
+
+Main Board Layout:
+1.0 Initial Draft
+
+
+Display Schematic:
+1.0 Inital Draft
+1.1 Added Bypass Capacitors, Removed Pulldowns from LED chains
+1.2 Added Pulldown resistors to Mux
+1.3 Added capacitor and resistor values
+1.4 Relocated FETs to bottom of LED Chains.
+
+
+Display Layout
+1.0 Initial Draft
+1.1 Added Pulldown Resistors to Mux
+1.2 Moved Fet Locations, changed connector type
+1.3 Re-Design for size and SM components
+1.4 Changed enable pin connection on mux, Changed connector type. (Submitted to OSHpark)
