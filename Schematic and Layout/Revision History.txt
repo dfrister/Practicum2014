@@ -1,10 +1,16 @@
 Main Board Schematic:
 1.0 Initial Draft
-
+1.1 Added test points
+1.2 
+1.3 Added a proper crystal and capacitors, added serial programmer
+1.4 Added enable pinout to mux header
 
 Main Board Layout:
 1.0 Initial Draft
-
+1.1 Added test points, Added drill holes
+1.2 Shrunk board size
+1.3 Added a proper crystal and capacitors, added serial programmer
+1.4 Added enable pinout to mux header
 
 Display Schematic:
 1.0 Inital Draft
