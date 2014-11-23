@@ -1,6 +1,8 @@
 /*T04 Motorcycle Proximity Sensor
 October 27, 2014
 github.com/dfrister/practicum2014
+COMMIT NUMBER 100
+
 */
 
 /* This code will poll three sensors for distances of an object
