@@ -17,10 +17,10 @@ blindspot detector for a motorcycle*/
 #define muxBit3 3 //Arduino Pin 3, Atmega pin 5 to mux A3
 #define triggerPin_left 4 //Arduino Pin 4, Atmega pin 6 to sensor header 1 //LEFT
 #define echoPin_left 5 //Arduino Pin 5, Atmega pin 11 to sensor header 2 //LEFT
-#define triggerPin_right 6  //Arduino Pin 6, Atmega pin 12 to sensor header 3 // RIGHT
-#define echoPin_right 7 //Arduino Pin 7, Atmega pin 13 to sensor header 4 // RIGHT
-#define triggerPin_rear 8 //Arduino Pin 8, Atmega pin 14 to sensor header 5 //REAR
-#define echoPin_rear 9 //Arduino Pin 9, Atmega pin 15 to sensor header 6 //REAR
+#define triggerPin_rear 6 //Arduino Pin 6, Atmega pin 12 to sensor header 3 // RIGHT
+#define echoPin_rear 7 //Arduino Pin 7, Atmega pin 13 to sensor header 4 // RIGHT
+#define triggerPin_right 8  //Arduino Pin 8, Atmega pin 14 to sensor header 5 // RIGHT
+#define echoPin_right 9 //Arduino Pin 9, Atmega pin 15 to sensor header 6 // RIGHT
 #define enable 10 //Arduino pin 10, Atmega pin 16, to mux enable
 
 #define farDist 12
