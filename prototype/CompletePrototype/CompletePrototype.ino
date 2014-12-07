@@ -23,9 +23,9 @@ blindspot detector for a motorcycle*/
 #define echoPin_right 9 //Arduino Pin 9, Atmega pin 15 to sensor header 6 // RIGHT
 #define enable 10 //Arduino pin 10, Atmega pin 16, to mux enable
 
-#define farDist 12
-#define midDist 8
-#define closeDist 4
+#define farDist 3
+#define midDist 2
+#define closeDist 1
 
 /*The mux() function takes in four arguments that represent a 4-bit binary code
 which will output the code to a multiplexer in order to control 16 outputs.
@@ -84,8 +84,12 @@ void setup() {
 /*Variables for checking if the state changed*/
 
 
-
+}
 void loop() {
+  mux(0,1,1,1);
+  mux(1,0,1,1);
+  mux(0,0,1,1);
+  
   long duration_left = 0;
   float distance_left = 0;
   //This will poll the sensors
@@ -96,7 +100,7 @@ void loop() {
   digitalWrite(triggerPin_left, 0); //set trigger low
   duration_left = pulseIn(echoPin_left, 1); //wait for echo to go high, returns time
   distance_left = duration_left / 876 / 2; //distance is in feet, sound travels one foot in 876 microseconds
-  
+
   long duration_right = 0;
   float distance_right = 0;
   //This will poll the sensors
@@ -107,7 +111,7 @@ void loop() {
   digitalWrite(triggerPin_right, 0); //set trigger low
   duration_right = pulseIn(echoPin_right, 1); //wait for echo to go high, returns time
   distance_right = duration_right / 876 / 2; //distance is in feet, sound travels one foot in 876 microseconds  
-  
+ 
   long duration_rear = 0;
   float distance_rear = 0;
   //This will poll the sensors
@@ -123,45 +127,49 @@ void loop() {
   mux(1,0,1,1);
   mux(1,1,1,1);*/
      
-     
-  if (distance_left < farDist) { //green
-    mux(0,0,0,1);
-  }
-  if (distance_left < midDist) { //yellow
-    mux(0,0,1,0);          
-  }
-  if (distance_left < closeDist) { //red
-    mux(0,0,1,1);          
-  }
-  else if (distance_left == 0 || distance_left > 3) {
-    mux(0,1,0,0);
-  }
   
-  if (distance_right < farDist) { //green
+  if (distance_left < farDist) { //green
     mux(1,0,0,0);
   }
-  if (distance_right < midDist) { //yellow
+  if (distance_left < midDist) { //yellow
     mux(1,0,0,1);          
   }
-  if (distance_right < closeDist) { //red
+  if (distance_left < closeDist) { //red
     mux(1,0,1,0);          
   }
-  else if ( distance_right == 0 || distance_right > 3) {
+  /*else if (distance_left == 0 || distance_left > 3) {
     mux(1,0,1,1);
-  }
+  }*/
   
+
+  if (distance_right < farDist) { //green
+    mux(0,0,0,0);
+  }
+  if (distance_right < midDist) { //yellow
+    mux(0,0,0,1);          
+  }
+  if (distance_right < closeDist) { //red
+    mux(0,0,1,0);          
+  }
+  /*else if ( distance_right == 0 || distance_right > 3) {
+    mux(0,0,1,1);
+  }*/
+
   if (distance_rear < farDist) { //green
-    mux(1,1,0,0);
+
+    mux(0,1,0,0);
   }
   if (distance_rear < midDist) { //yellow
-    mux(1,1,0,1);          
+
+    mux(0,1,0,1);          
   }
   if (distance_rear < closeDist) { //red
-    mux(1,1,1,0);          
+
+    mux(0,1,1,0);          
   }
-  else if ( distance_rear == 0 || distance_rear > 3) {
-    mux(1,1,1,1);
-  }
-  delay(200);
+  /*else if ( distance_rear == 0 || distance_rear > 3) {
+    mux(0,1,1,1);
+  }*/
+  delay(0.05);
   
 }
