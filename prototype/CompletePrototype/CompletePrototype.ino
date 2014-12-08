@@ -57,6 +57,10 @@ void setup() {
   pinMode(triggerPin_rear, OUTPUT); //Set Sensor 3 Trigger as an output
   pinMode(echoPin_rear, INPUT); //Set sensor 3 Echo as an input
   pinMode(enable, OUTPUT);
+  
+  mux(0,1,1,1);
+  mux(1,0,1,1);
+  mux(0,0,1,1);
   /*
   mux(0,1,0,0); //reset all
   mux(1,0,1,1);
@@ -86,9 +90,7 @@ void setup() {
 
 }
 void loop() {
-  mux(0,1,1,1);
-  mux(1,0,1,1);
-  mux(0,0,1,1);
+ 
   
   long duration_left = 0;
   float distance_left = 0;
@@ -126,7 +128,10 @@ void loop() {
   /*mux(0,1,0,0);
   mux(1,0,1,1);
   mux(1,1,1,1);*/
-     
+  
+  mux(0,1,1,1);
+  mux(1,0,1,1);
+  mux(0,0,1,1);    
   
   if (distance_left < farDist) { //green
     mux(1,0,0,0);
