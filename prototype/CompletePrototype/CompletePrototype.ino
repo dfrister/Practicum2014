@@ -1,14 +1,13 @@
 /*T04 Motorcycle Proximity Sensor
 October 27, 2014
 github.com/dfrister/practicum2014
-COMMIT NUMBER 100
+COMMIT NUMBER 10
 
-*/
-
-/* This code will poll three sensors for distances of an object
+This code will poll three sensors for distances of an object
 and will control the outputs to 3 seperate banks of 3 LEDs each in
 order to function as a proximity detector for the application of a
 blindspot detector for a motorcycle*/
+
 
 //Arduino pins to circuit
 #define muxBit0 0 //Arduino Pin 0, Atmega pin 2 to mux A0
@@ -26,6 +25,8 @@ blindspot detector for a motorcycle*/
 #define farDist 15
 #define midDist 10
 #define closeDist 5
+#define timeOut 50000 //50ms timeout for sensors
+
 
 /*The mux() function takes in four arguments that represent a 4-bit binary code
 which will output the code to a multiplexer in order to control 16 outputs.
@@ -41,8 +42,6 @@ void mux(bool bit3, bool bit2, bool bit1, bool bit0) {
   digitalWrite(enable,1);
   delayMicroseconds(100);
 }
-/*Variables for the setup and loop function)*/
-
 
 /*The setup function runs on startup*/
 void setup() {
@@ -58,40 +57,14 @@ void setup() {
   pinMode(echoPin_rear, INPUT); //Set sensor 3 Echo as an input
   pinMode(enable, OUTPUT);
   
-  mux(0,1,1,1);
-  mux(1,0,1,1);
-  mux(0,0,1,1);
-  /*
-  mux(0,1,0,0); //reset all
-  mux(1,0,1,1);
-  mux(1,1,1,1);
-  delay(100);
-  mux(0,0,0,1); //set greens
-  mux(1,0,0,0);
-  mux(1,1,0,0);
-  delay(100);
-  mux(1,1,0,1); //set yellows
-  mux(1,0,0,1);
-  mux(0,0,1,0);
-  delay(100);  
-  mux(0,0,1,1); //set reds
-  mux(1,0,1,0);
-  mux(1,1,1,0);
-  delay(3000); wait 3 seconds
-  mux(0,1,0,0); //reset all
-  mux(1,0,1,1);
-  mux(1,1,1,1);
-
+  mux(0,1,1,1); // reset code
+  mux(1,0,1,1); // reset code
+  mux(0,0,1,1); // reset code
 
 }
 
-/*Variables for checking if the state changed*/
-
-
-}
 void loop() {
- 
-  
+   
   long duration_left = 0;
   float distance_left = 0;
   //This will poll the sensors
@@ -100,7 +73,7 @@ void loop() {
   digitalWrite(triggerPin_left, 1); //set trigger high
   delayMicroseconds(5); //high for 5 microseconds
   digitalWrite(triggerPin_left, 0); //set trigger low
-  duration_left = pulseIn(echoPin_left, 1); //wait for echo to go high, returns time
+  duration_left = pulseIn(echoPin_left, 1, timeOut); //wait for echo to go high, returns time
   distance_left = duration_left / 876 / 2; //distance is in feet, sound travels one foot in 876 microseconds
 
   long duration_right = 0;
@@ -111,7 +84,7 @@ void loop() {
   digitalWrite(triggerPin_right, 1); //set trigger high
   delayMicroseconds(5); //high for 5 microseconds
   digitalWrite(triggerPin_right, 0); //set trigger low
-  duration_right = pulseIn(echoPin_right, 1); //wait for echo to go high, returns time
+  duration_right = pulseIn(echoPin_right, 1, timeOut); //wait for echo to go high, returns time
   distance_right = duration_right / 876 / 2; //distance is in feet, sound travels one foot in 876 microseconds  
  
   long duration_rear = 0;
@@ -122,12 +95,8 @@ void loop() {
   digitalWrite(triggerPin_rear, 1); //set trigger high
   delayMicroseconds(5); //high for 5 microseconds
   digitalWrite(triggerPin_rear, 0); //set trigger low
-  duration_rear = pulseIn(echoPin_rear, 1); //wait for echo to go high, returns time
+  duration_rear = pulseIn(echoPin_rear, 1, timeOut); //wait for echo to go high, returns time
   distance_rear = duration_rear / 876 / 2; //distance is in feet, sound travels one foot in 876 microseconds
-   
-  /*mux(0,1,0,0);
-  mux(1,0,1,1);
-  mux(1,1,1,1);*/
   
   mux(0,1,1,1);
   mux(1,0,1,1);
@@ -175,6 +144,5 @@ void loop() {
   /*else if ( distance_rear == 0 || distance_rear > 3) {
     mux(0,1,1,1);
   }*/
-  delay(0.05);
   
 }
