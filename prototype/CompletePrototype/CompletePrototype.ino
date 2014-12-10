@@ -23,9 +23,9 @@ blindspot detector for a motorcycle*/
 #define echoPin_right 9 //Arduino Pin 9, Atmega pin 15 to sensor header 6 // RIGHT
 #define enable 10 //Arduino pin 10, Atmega pin 16, to mux enable
 
-#define farDist 3
-#define midDist 2
-#define closeDist 1
+#define farDist 15
+#define midDist 10
+#define closeDist 5
 
 /*The mux() function takes in four arguments that represent a 4-bit binary code
 which will output the code to a multiplexer in order to control 16 outputs.
