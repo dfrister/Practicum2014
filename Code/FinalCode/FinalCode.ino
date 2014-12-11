@@ -1,11 +1,8 @@
 /*T04 Motorcycle Proximity Sensor
-October 27, 2014
-github.com/dfrister/practicum2014
-COMMIT NUMBER 100
+December 11th, 2014
+github.com/dfrister/practicum2014 
 
-*/
-
-/* This code will poll three sensors for distances of an object
+This code will poll three sensors for distances of an object
 and will control the outputs to 3 seperate banks of 3 LEDs each in
 order to function as a proximity detector for the application of a
 blindspot detector for a motorcycle*/
@@ -41,8 +38,6 @@ void mux(bool bit3, bool bit2, bool bit1, bool bit0) {
   digitalWrite(enable,1);
   delayMicroseconds(100);
 }
-/*Variables for the setup and loop function)*/
-
 
 /*The setup function runs on startup*/
 void setup() {
@@ -61,36 +56,9 @@ void setup() {
   mux(0,1,1,1);
   mux(1,0,1,1);
   mux(0,0,1,1);
-  /*
-  mux(0,1,0,0); //reset all
-  mux(1,0,1,1);
-  mux(1,1,1,1);
-  delay(100);
-  mux(0,0,0,1); //set greens
-  mux(1,0,0,0);
-  mux(1,1,0,0);
-  delay(100);
-  mux(1,1,0,1); //set yellows
-  mux(1,0,0,1);
-  mux(0,0,1,0);
-  delay(100);  
-  mux(0,0,1,1); //set reds
-  mux(1,0,1,0);
-  mux(1,1,1,0);
-  delay(3000); wait 3 seconds
-  mux(0,1,0,0); //reset all
-  mux(1,0,1,1);
-  mux(1,1,1,1);
-
-
-}
-
-/*Variables for checking if the state changed*/
-
-
+ 
 }
 void loop() {
- 
   
   long duration_left = 0;
   float distance_left = 0;
@@ -124,10 +92,6 @@ void loop() {
   digitalWrite(triggerPin_rear, 0); //set trigger low
   duration_rear = pulseIn(echoPin_rear, 1); //wait for echo to go high, returns time
   distance_rear = duration_rear / 876 / 2; //distance is in feet, sound travels one foot in 876 microseconds
-   
-  /*mux(0,1,0,0);
-  mux(1,0,1,1);
-  mux(1,1,1,1);*/
   
   mux(0,1,1,1);
   mux(1,0,1,1);
@@ -142,10 +106,6 @@ void loop() {
   if (distance_left < closeDist) { //red
     mux(1,0,1,0);          
   }
-  /*else if (distance_left == 0 || distance_left > 3) {
-    mux(1,0,1,1);
-  }*/
-  
 
   if (distance_right < farDist) { //green
     mux(0,0,0,0);
@@ -156,9 +116,6 @@ void loop() {
   if (distance_right < closeDist) { //red
     mux(0,0,1,0);          
   }
-  /*else if ( distance_right == 0 || distance_right > 3) {
-    mux(0,0,1,1);
-  }*/
 
   if (distance_rear < farDist) { //green
 
@@ -172,9 +129,5 @@ void loop() {
 
     mux(0,1,1,0);          
   }
-  /*else if ( distance_rear == 0 || distance_rear > 3) {
-    mux(0,1,1,1);
-  }*/
   delay(0.05);
-  
 }
