@@ -25,8 +25,8 @@ blindspot detector for a motorcycle*/
 #define farDist 15
 #define midDist 10
 #define closeDist 5
-#define timeOut 50000 //50ms timeout for sensors
-
+#define minDist 0.2 //0.2 feet
+#define timeOut 100000 //50ms timeout for sensors
 
 /*The mux() function takes in four arguments that represent a 4-bit binary code
 which will output the code to a multiplexer in order to control 16 outputs.
@@ -98,46 +98,46 @@ void loop() {
   duration_rear = pulseIn(echoPin_rear, 1, timeOut); //wait for echo to go high, returns time
   distance_rear = duration_rear / 876 / 2; //distance is in feet, sound travels one foot in 876 microseconds
   
-  mux(0,1,1,1);
-  mux(1,0,1,1);
-  mux(0,0,1,1);    
+  mux(0,1,1,1); //reset code
+  mux(1,0,1,1); //reset code
+  mux(0,0,1,1); //reset code
   
-  if (distance_left < farDist) { //green
+  if (distance_left < farDist && distance_left > minDist) { //green
     mux(1,0,0,0);
   }
-  if (distance_left < midDist) { //yellow
+  if (distance_left < midDist && distance_left > minDist) { //yellow
     mux(1,0,0,1);          
   }
-  if (distance_left < closeDist) { //red
-    mux(1,0,1,0);          
+  if (distance_left < closeDist && distance_left > minDist) { //red
+    mux(1,0,1,0);
   }
   /*else if (distance_left == 0 || distance_left > 3) {
     mux(1,0,1,1);
   }*/
   
 
-  if (distance_right < farDist) { //green
+  if (distance_right < farDist && distance_right > minDist) { //green
     mux(0,0,0,0);
   }
-  if (distance_right < midDist) { //yellow
+  if (distance_right < midDist && distance_right > minDist) { //yellow
     mux(0,0,0,1);          
   }
-  if (distance_right < closeDist) { //red
+  if (distance_right < closeDist && distance_right > minDist) { //red
     mux(0,0,1,0);          
   }
   /*else if ( distance_right == 0 || distance_right > 3) {
     mux(0,0,1,1);
   }*/
 
-  if (distance_rear < farDist) { //green
+  if (distance_rear < farDist && distance_rear > minDist) { //green
 
     mux(0,1,0,0);
   }
-  if (distance_rear < midDist) { //yellow
+  if (distance_rear < midDist && distance_rear > minDist) { //yellow
 
     mux(0,1,0,1);          
   }
-  if (distance_rear < closeDist) { //red
+  if (distance_rear < closeDist && distance_rear > minDist) { //red
 
     mux(0,1,1,0);          
   }
